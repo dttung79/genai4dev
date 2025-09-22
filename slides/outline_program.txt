@@ -1,0 +1,34 @@
+Buổi 1: Giới thiệu Gen AI trong phát triển phần mềm
+- Giới thiệu Gen AI
+- Giới thiệu các khái niệm cơ bản của Gen AI
+- Phân loại các AI tool / ide hỗ trợ lập trình tự động
+- Giới thiệu các AI tool / ide nổi bật
+
+Buổi 2: Lập trình Gen AI với Gemini API
+- Giới thiệu Gemini API
+- Hỏi đáp stageless
+- Hỏi đáp stateful
+- System prompt
+- Tạo ứng dụng chat text-based với Gemini API
+
+Buổi 3: Multimedia trong Gemini API
+- Sinh ảnh
+- Sinh audio
+- Hỏi đáp theo tài liệu upload
+
+Buổi 4: Các khái niệm nâng cao khi lập trình với Gen AI
+- Code Execution
+- Function Calling
+- Caching
+
+Buổi 5: RAG cơ bản
+
+Buổi 6: Fine-tune 
+
+Buổi 7: MCP
+
+Buổi 8: Agent
+
+Buổi 9: Giới thiệu mini Project
+
+Buổi 10: Demo mini project
