@@ -127,6 +127,52 @@ Chứa tài liệu slides và các file hỗ trợ cho việc tạo bài giảng
 - **Styling**: Custom CSS framework với responsive design
 - **Animation**: CSS animations và transitions
 
+## 🤝 Hướng dẫn Collaboration cho Giảng viên
+
+### Để sử dụng tài liệu này:
+
+1. **Fork repository**: Tạo một bản copy của repo về GitHub account của bạn
+2. **Clone repository**: Clone repo đã fork về máy local để sử dụng
+   ```bash
+   git clone https://github.com/[your-username]/genai4dev.git
+   ```
+
+### Để đóng góp cải thiện tài liệu:
+
+1. **Tạo branch mới** từ main branch:
+   ```bash
+   git checkout -b feature/your-improvement-name
+   ```
+
+2. **Thực hiện thay đổi**: Sửa lỗi, bổ sung nội dung, cải thiện code
+
+3. **Commit changes**:
+   ```bash
+   git add .
+   git commit -m "Mô tả chi tiết thay đổi của bạn"
+   ```
+
+4. **Push branch** lên GitHub:
+   ```bash
+   git push origin feature/your-improvement-name
+   ```
+
+5. **Tạo Pull Request**: Từ GitHub interface, tạo Pull Request từ branch của bạn về main branch của repo gốc
+
+6. **Review và merge**: Tôi sẽ review và merge các thay đổi hữu ích
+
+### Các loại đóng góp được khuyến khích:
+
+- ✅ Sửa lỗi trong code hoặc slides
+- ✅ Bổ sung ví dụ thực tế
+- ✅ Cải thiện documentation
+- ✅ Thêm câu hỏi thường gặp
+- ✅ Cập nhật công nghệ mới
+- ✅ Dịch thuật và localization
+
+### Liên hệ:
+📧 Email: [tungdt27@fe.edu.vn] để thảo luận về các thay đổi lớn trước khi thực hiện
+
 ---
 
 **Tác giả**: Doan Trung Tung, PhD, Greenwich Vietnam  
