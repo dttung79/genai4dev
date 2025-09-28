@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conclusion and Next Steps</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="slide fade-in">
+    <div class="slide-header"></div>
+    <div class="slide-content">
+      <h1 class="slide-title">Conclusion and Next Steps</h1>
+      <ul class="content-list wide compact template6-list">
+        <li class="slide-in-center">
+          <div class="main-content">
+            <strong>What We've Accomplished</strong>
+          </div>
+          <ul class="sub-list">
+            <li class="slide-in-center" style="animation-delay: 0.1s;">Built a fully functional RAG chatbot from scratch.</li>
+            <li class="slide-in-center" style="animation-delay: 0.15s;">Implemented a complete pipeline: document processing, embedding, indexing, retrieval, and generation.</li>
+            <li class="slide-in-center" style="animation-delay: 0.2s;">Created an interactive and user-friendly web interface.</li>
+          </ul>
+        </li>
+        <li class="slide-in-center" style="animation-delay: 0.3s;">
+          <div class="main-content">
+            <strong>How to Improve</strong>
+          </div>
+          <ul class="sub-list">
+            <li class="slide-in-center" style="animation-delay: 0.35s;"><strong>Hybrid Search:</strong> Combine vector search with traditional keyword search for better accuracy.</li>
+            <li class="slide-in-center" style="animation-delay: 0.4s;"><strong>Scalability:</strong> For larger applications, migrate from FAISS to a dedicated vector database like PostgreSQL with <code>pgvector</code>.</li>
+            <li class="slide-in-center" style="animation-delay: 0.45s;"><strong>Enhanced UI:</strong> Add a feature to display the source chunks for each answer to increase transparency.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="footer-nav"><button class="nav-btn" onclick="previousSlide()">◀ Prev</button></div>
+      <div class="footer-center"><div class="footer-text">All these resources belong to FPT Greenwich. Any unauthorized copying, alteration, distribution outside our organization is strictly prohibited</div></div>
+      <div class="footer-nav"><button class="nav-btn" onclick="nextSlide()">Next ▶</button></div>
+    </div>
+  </div>
+  <script src="presentation.js"></script>
+</body>
+</html>
