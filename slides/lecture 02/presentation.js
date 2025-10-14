@@ -32,8 +32,7 @@ class PresentationController {
             'slide26.html',
             'slide27.html',
             'slide28.html',
-            'slide29.html',
-            'slide30.html'
+            'slide29.html'
         ];
         
         this.currentSlide = 0;
