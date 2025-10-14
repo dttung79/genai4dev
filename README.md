@@ -118,6 +118,115 @@ Chứa tài liệu slides và các file hỗ trợ cho việc tạo bài giảng
 
 ## Chi tiết Code thực hành theo từng Lecture
 
+### 🚀 **Lecture 02 - Lập trình Gen AI với Gemini API**
+**Thư mục**: `/code/lecture02/`
+
+Làm quen với Gemini API từ cơ bản đến nâng cao, bao gồm stateless và stateful conversations.
+
+**Files chính**:
+- **`tut01_hello_gemini.py`**: First steps với Gemini API
+  - Setup API key và authentication
+  - Gửi request đơn giản và nhận response
+  - Error handling cơ bản
+
+- **`tut02_stateless_chat.py`**: Stateless conversation
+  - Mỗi request độc lập, không nhớ context
+  - Phù hợp cho single-turn Q&A
+  - Performance cao, ít memory
+
+- **`tut03_stateful_chat.py`**: Stateful conversation với memory
+  - Duy trì context qua nhiều turns
+  - Chat history management
+  - Multi-turn conversation flows
+
+- **`tut04_system_prompt.py`**: System prompt để định hình behavior
+  - Role-based AI assistants (teacher, coder, analyst)
+  - Prompt engineering techniques
+  - Personality và tone control
+
+**Công nghệ sử dụng**: Google Gemini API, Python requests, JSON handling
+
+### 🎨 **Lecture 03 - Multimedia trong Gemini API**
+**Thư mục**: `/code/lecture03/`
+
+Xử lý và phân tích nội dung đa phương tiện với Gemini API.
+
+**Files chính**:
+- **`tut01_image_analysis.py`**: Phân tích hình ảnh
+  - Upload và process images
+  - Image description và object detection
+  - Visual question answering
+  - OCR (text extraction from images)
+
+- **`tut02_audio_processing.py`**: Xử lý âm thanh
+  - Audio transcription
+  - Speech-to-text conversion
+  - Audio content analysis
+  - Multi-language support
+
+- **`tut03_document_upload.py`**: Upload và xử lý tài liệu
+  - PDF text extraction
+  - Document Q&A
+  - Multi-page document analysis
+  - File format support (PDF, DOCX, TXT)
+
+- **`tut04_multimodal_combo.py`**: Kết hợp nhiều loại media
+  - Image + text analysis
+  - Audio + visual processing
+  - Cross-modal understanding
+  - Complex multimodal queries
+
+**Thư mục hỗ trợ**:
+- **`samples/`**: Ảnh, audio, document mẫu cho testing
+- **`uploads/`**: Temporary folder cho user uploads
+
+**Công nghệ sử dụng**: Gemini Vision API, Audio API, File API, PIL/Pillow, PyPDF2
+
+### ⚡ **Lecture 04 - Các khái niệm nâng cao**
+**Thư mục**: `/code/lecture04/`
+
+Kỹ thuật nâng cao với Gemini API: Code Execution, Function Calling, và Caching.
+
+**Files chính**:
+- **`tut01_code_execution.py`**: Code Execution trong Gemini
+  - Dynamic code generation và execution
+  - Python code runner trong AI responses
+  - Mathematical computations
+  - Data analysis và visualization
+  - Security considerations
+
+- **`tut02_function_calling.py`**: Function Calling mechanism
+  - Define custom functions cho AI
+  - Weather API integration
+  - Database queries through functions
+  - External service integration
+  - Function schemas và validation
+
+- **`tut03_caching.py`**: Context Caching để tối ưu performance
+  - Cache large documents/contexts
+  - Reduce API costs và latency
+  - Cache expiration management
+  - Cost optimization strategies
+
+- **`tut04_advanced_combo.py`**: Kết hợp các tính năng nâng cao
+  - Function calling + code execution
+  - Cached contexts với dynamic functions
+  - Complex workflow automation
+  - Real-world integration examples
+
+**Functions mẫu**:
+- **`functions/weather.py`**: Weather API integration
+- **`functions/database.py`**: Database query functions
+- **`functions/calculator.py`**: Advanced mathematical operations
+- **`functions/utils.py`**: Utility functions cho các tutorials
+
+**Công nghệ sử dụng**: 
+- Gemini Advanced API features
+- External APIs (weather, databases)
+- JSON schema validation
+- Caching mechanisms
+- Dynamic code execution
+
 ### 📚 **Lecture 05 - RAG (Retrieval-Augmented Generation)**
 **Thư mục**: `/code/lecture05/`
 
