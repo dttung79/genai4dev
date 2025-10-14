@@ -11,6 +11,10 @@ Chứa các file code Python thực hành cho từng buổi học:
 - **`lecture02/`**: Code thực hành cho Buổi 2 - Lập trình với Gemini API
 - **`lecture03/`**: Code thực hành cho Buổi 3 - Multimedia trong Gemini API  
 - **`lecture04/`**: Code thực hành cho Buổi 4 - Các khái niệm nâng cao
+- **`lecture05/`**: Code thực hành cho Buổi 5 - RAG (Retrieval-Augmented Generation)
+- **`lecture06/`**: Code thực hành cho Buổi 6 - Fine-tuning với Gemini API
+- **`lecture07/`**: Code thực hành cho Buổi 7 - MCP (Model Context Protocol)
+- **`lecture08/`**: Code thực hành cho Buổi 8 - AI Agents
 
 ### 📁 `/slides`
 Chứa tài liệu slides và các file hỗ trợ cho việc tạo bài giảng.
@@ -112,18 +116,132 @@ Chứa tài liệu slides và các file hỗ trợ cho việc tạo bài giảng
 - **Dynamic Sizing**: Font tự động điều chỉnh theo số lượng nội dung
 - **Color Scheme**: Cam (#FF6B35), xanh nước biển (#007BFF), trắng, xanh đen
 
+## Chi tiết Code thực hành theo từng Lecture
+
+### 📚 **Lecture 05 - RAG (Retrieval-Augmented Generation)**
+**Thư mục**: `/code/lecture05/`
+
+Hệ thống chatbot PDF hoàn chỉnh sử dụng embeddings và tìm kiếm vector semantic.
+
+**Files chính**:
+- **`extract_text.py`**: Trích xuất text từ file PDF và DOCX
+- **`create_embeddings.py`**: Tạo embeddings và FAISS indices cho tìm kiếm semantic
+- **`chat_txt_gemini.py`**: Ứng dụng Streamlit chatbot chính với text-to-speech
+- **`requirements.txt`**: Dependencies cho dự án RAG
+- **`README.md`**: Hướng dẫn chi tiết setup và sử dụng
+
+**Thư mục hỗ trợ**:
+- **`docs/`**: Chứa file PDF/DOCX input (curriculum, quy chế, etc.)
+- **`chunks/`**: Text chunks đã được xử lý
+- **`bins/`**: FAISS index files
+- **`.streamlit/`**: Config Streamlit và template secrets
+
+**Công nghệ sử dụng**: FAISS, sentence-transformers, Streamlit, Google Gemini API, text-to-speech
+
+### 🎯 **Lecture 06 - Fine-tuning với Gemini API**
+**Thư mục**: `/code/lecture06/`
+
+Fine-tuning model Gemini để chuyên biệt hóa cho nhiệm vụ phân loại sentiment phim.
+
+**Files chính**:
+- **`tutorial01.ipynb`**: Jupyter notebook hoàn chỉnh về fine-tuning process
+- **`IMDB_cleaned.csv`**: Dataset IMDB reviews đã được làm sạch
+- **`my_movie_sentiment_model/`**: Model đã được fine-tuned
+
+**Nội dung tutorial**:
+- **Part 1**: Hiểu về Fine-tuning (khái niệm, so sánh pre-trained vs fine-tuned)
+- **Part 2**: Quy trình Fine-tuning (chuẩn bị data, training, evaluation)
+- **Part 3**: Thực hành với Gemini API (setup, training job, testing)
+- **Part 4**: So sánh performance trước và sau fine-tuning
+
+**Dataset**: 50,000 IMDB movie reviews với sentiment labels (positive/negative)
+
+### 🔌 **Lecture 07 - MCP (Model Context Protocol)**
+**Thư mục**: `/code/lecture07/`
+
+Triển khai MCP servers để mở rộng khả năng của AI models thông qua external tools.
+
+**Files chính**:
+- **`tut01_file_mcp.py`**: File Manager MCP Server
+  - Đọc nội dung file text
+  - Liệt kê thư mục
+  - Ghi file trong workspace được phép
+  - Quản lý file system thông qua MCP protocol
+
+- **`tut02_mysql_mcp.py`**: MySQL Database MCP Server
+  - Kết nối và query MySQL database
+  - Thực thi SQL commands an toàn
+  - Quản lý database schema
+  - Trả về kết quả structured data
+
+**Khái niệm MCP**:
+- Protocol chuẩn để AI models giao tiếp với external systems
+- Server-client architecture
+- Tool exposure và execution
+- Context management
+
+### 🤖 **Lecture 08 - AI Agents**
+**Thư mục**: `/code/lecture08/`
+
+Xây dựng hệ thống AI agents thông minh với khả năng collaboration và guardrails.
+
+**Files chính**:
+- **`tut01_hello_agent.py`**: Agent cơ bản
+  - Tạo agent đơn giản với OpenAI API
+  - Chạy synchronous agent
+  - Agent với instructions chuyên biệt (poet agent)
+
+- **`tut02_3agents.py`**: Hệ thống multi-agent phức tạp
+  - **Guardrail Agent**: Kiểm tra input có phải homework không
+  - **Triage Agent**: Phân loại và điều hướng câu hỏi
+  - **Math Tutor Agent**: Chuyên gia toán học
+  - **History Tutor Agent**: Chuyên gia lịch sử
+  - Async processing và error handling
+  - Interactive Q&A session với exit commands
+
+**Tính năng nâng cao**:
+- Input guardrails để bảo mật
+- Agent handoffs và routing
+- Structured output với Pydantic
+- Exception handling cho tripwires
+- Interactive conversation flow
+
+**Kiến trúc agents**: Guardrail → Triage → Specialist Agents → User
+
+### 📁 `/slides`
+
 ## Quy trình sử dụng
 
-1. **Lập kế hoạch**: Tham khảo `outline_program.txt` cho roadmap tổng thể
+1. **Lập kế hoạch**: Tham khảo `outline_program.txt` cho roadmap tổng thể (8 buổi học)
 2. **Tạo outline chi tiết**: Sử dụng `prompt_outline.txt` với AI
 3. **Tạo slides**: Sau khi có outline, sử dụng `prompt_lecture.md` với AI và templates
-4. **Khắc phục lỗi**: Tham khảo `common_errors.md` khi gặp vấn đề kỹ thuật. Nếu phát sinh lỗi nào hay gặp mà chưa có trong tài liệu, hãy bổ sung vào để hoàn thiện hơn.
-5. **Thực hành**: Sử dụng code trong thư mục `/code` để demo
+4. **Thực hành lập trình**: 
+   - **Buổi 2-4**: Gemini API cơ bản đến nâng cao
+   - **Buổi 5**: RAG với embeddings và vector search
+   - **Buổi 6**: Fine-tuning models với Jupyter notebooks
+   - **Buổi 7**: MCP servers cho external tool integration
+   - **Buổi 8**: Multi-agent systems với guardrails
+5. **Khắc phục lỗi**: Tham khảo `common_errors.md` khi gặp vấn đề kỹ thuật
+6. **Demo và Q&A**: Sử dụng code trong thư mục `/code` để demo cho sinh viên
 
 ## Công nghệ sử dụng
 
-- **Frontend**: HTML5, CSS3, JavaScript (vanilla)
-- **Backend**: Python với Gemini API
+- **Frontend**: HTML5, CSS3, JavaScript (vanilla), Streamlit
+- **Backend**: Python với Gemini API, OpenAI API
+- **AI/ML Libraries**: 
+  - sentence-transformers (embeddings)
+  - FAISS (vector search)
+  - scikit-learn (machine learning)
+  - agents (multi-agent systems)
+- **Data Processing**: 
+  - PyPDF2, python-docx (document extraction)
+  - pandas, numpy (data manipulation)
+  - RecursiveCharacterTextSplitter (text chunking)
+- **Database**: MySQL with MCP protocol
+- **Development Tools**: 
+  - Jupyter Notebooks (interactive development)
+  - MCP (Model Context Protocol)
+  - text-to-speech libraries
 - **Styling**: Custom CSS framework với responsive design
 - **Animation**: CSS animations và transitions
 
